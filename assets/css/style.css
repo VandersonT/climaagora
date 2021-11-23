@@ -1,0 +1,197 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgb(43, 43, 43);
+    background-image: url('../images/banner1.jpg');
+    background-position: center;
+    background-size: cover;
+    font-family: Arial, Helvetica, sans-serif;
+    transition: 1s;
+}
+
+.getCity{
+    padding: 20px;
+    border-radius: 5px;
+    background-color: rgba(207, 207, 207, 0.5);
+    border: 1px solid rgb(100, 100, 100);
+    -webkit-box-shadow: 0px 1px 15px 2px rgba(0,0,0,0.53); 
+    box-shadow: 0px 1px 15px 2px rgba(0,0,0,0.53);
+}
+
+h1{
+    color: rgb(29, 29, 31);
+    margin: 20px 0;
+    text-align: center;
+    font-weight: lighter;
+    font-size: 28px;
+}
+
+h1 i {
+    font-size: 24px;
+    margin-right: 5px;
+}
+
+.search {
+    display: flex;
+    width: 300px;
+}
+.search #searchInput {
+    flex: 1;
+    padding: 10px;
+    outline: none;
+    font-size: 15px;
+    border-radius: 5px;
+    border: 1px solid rgb(150, 150, 150);
+}
+.search button {
+    padding: 10px;
+    font-size: 15px;
+    border: 0;
+    background-color: rgb(6, 142, 233);
+    color: #FFF;
+    border-radius: 5px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+.search button:hover {
+    background-color: rgb(6, 136, 223);
+}
+
+.results {
+    width: 300px;
+    display: none;
+    border: 2px dotted #FFF;
+    margin-top: 20px;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.title {
+    width: 100%;
+    color: rgb(255, 145, 0);
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    padding: 20px;
+}
+
+.info {
+    display: flex;
+    width: 100%;
+}
+.info .temp {
+    flex: 1;
+    text-align: center;
+}
+.info .wind {
+    flex: 1;
+    text-align: center;
+}
+.tempTitulo,
+.windTitulo {
+    color: #777;
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+.tempInfo,
+.windInfo {
+    color: #FFF;
+    font-size: 30px;
+    font-weight: bold;
+}
+.tempInfo sup {
+    font-size: 15px;
+    font-weight: normal;
+}
+.windInfo span {
+    font-size: 15px;
+    font-weight: normal;
+}
+.windArea {
+    width: 50px;
+    height: 50px;
+    border: 1px solid #FFF;
+    border-radius: 50%;
+    margin: auto;
+    margin-top: 20px;
+    padding-left: 25px;
+    padding-top: 25px;
+}
+.windPonto {
+    width: 15px;
+    height: 1px;
+    background-color: #FFF;
+    transform-origin: left;
+}
+
+.loading {
+    color: rgb(0, 0, 0);
+    padding-top: 20px;
+    display: none;
+}
+
+.error {
+    color: rgb(255, 251, 251);
+    padding-top: 10px;
+    background-color: rgba(138, 11, 11, 0.9);
+    margin-top: 20px;
+    padding: 5px;
+    border-radius: 5px;
+    display: none;
+}
+
+footer {
+    margin-top: 20px;
+    color: rgb(20, 20, 20);
+    font-size: 15px;
+    background-color: rgba(207, 207, 207, 0.5);
+    padding: 5px;
+    border-radius: 2px;
+}
+
+@media screen and (max-width: 400px){
+    .getCity{
+        padding: 10px;
+        width: 90%;
+    }
+    h1{
+        font-size: 23px;
+    }
+    h1 i{
+        font-size: 18px;
+    }
+    .search {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+    .search button {
+        width: 100px;
+        font-size: 15px;
+        margin-left: 0;
+        margin-top: 10px;
+        padding: 8px;
+    }
+}
+
+@media screen and (max-width: 350px){
+    .results{
+        width: 90%;
+    }
+    .title{
+        font-size: 18px;
+    }
+    .tempInfo,
+    .windInfo{
+        font-size: 19px;
+    }
+}
