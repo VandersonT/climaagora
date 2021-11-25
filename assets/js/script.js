@@ -1,4 +1,3 @@
-//myopenweather,,
 document.querySelector('.search').addEventListener('submit', async (e)=>{
     e.preventDefault();
 
